@@ -38,31 +38,31 @@ resource "aws_s3_bucket" "example" {
 resource "aws_s3_object" "object" {
   bucket = aws_s3_bucket.example.id
   key    = "main.js"
-  source = "/home/user/todo-list/js/main.js"
-  etag = filemd5("/home/user/todo-list/js/main.js")
+  source = "main.tf"
+  etag = filemd5("main.tf")
 }
 
 resource "aws_s3_object" "object-1" {
   bucket = aws_s3_bucket.example.id
   key    = "index.html"
-  source = "/home/user/todo-list/index.html"
-  etag = filemd5("/home/user/todo-list/index.html")
+  source = "main.tf"
+  etag = filemd5("main.tf")
 }
 
 
 resource "aws_s3_object" "object-2" {
   bucket = aws_s3_bucket.example.id
   key    = "favicon.ico"
-  source = "/home/user/todo-list/img/favicon.ico"
-  etag = filemd5("/home/user/todo-list/img/favicon.ico")
+  source = "main.tf"
+  etag = filemd5("main.tf")
 }
  
 
 resource "aws_s3_object" "object-3" {
   bucket = aws_s3_bucket.example.id
   key    = "main.css"
-  source = "/home/user/todo-list/css/main.css"
-  etag = filemd5("/home/user/todo-list/css/main.css")
+  source = "main.tf"
+  etag = filemd5("main.tf")
 }
  
 
